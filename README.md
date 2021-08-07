@@ -1,8 +1,7 @@
 # puppy-seq
 
-[![Test](http:&#x2F;&#x2F;&#x2F;actions&#x2F;workflows&#x2F;build.yml&#x2F;badge.svg)](http:&#x2F;&#x2F;&#x2F;actions&#x2F;workflows&#x2F;build.yml)
+[![Test](https://github.com/dankreiger/puppy-seq/actions/workflows/build.yml/badge.svg)](https://github.com/dankreiger/puppy-seq/actions/workflows/build.yml)
 
-[API Docs](http://)
 
 ---
 

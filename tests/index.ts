@@ -8,9 +8,10 @@ describe('greet', () => {
     fc.assert(
       fc.property(fc.string(), (name) => {
         const add2 = myLib.mapReducer((x: any) => x + 3)
-
         const fnPipeline = pipe(add2)
         expect(myLib.seq(fnPipeline, [1, 2, 3])).toEqual([4, 5, 6])
+
+        expect(name).toBe(name)
       })
     )
   })
