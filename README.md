@@ -30,11 +30,12 @@ npm install fp-ts puppy-seq
 ## Example
 
 ```ts
-import * as DOGGIE from 'puppy-seq'
+import { mapReducer, seq } from 'puppy-seq'
+import { compose } from 'ramda' // or whatever fp library
 
 const fnPipeline = compose(
-  DOGGIE.mapReducer(somexformreducer), 
-  DOGGIE.mapReducer(anotherxformfunction)
+  mapReducer(somexformreducer),
+  mapReducer(anotherxformfunction)
 )
-DOGGIE.seq(fnPipeline, Object.entries(realisticF0));
+seq(fnPipeline, Object.entries(realisticF0));
 ```
