@@ -33,6 +33,7 @@ npm install fp-ts puppy-seq
 import { mapReducer, seq } from 'puppy-seq'
 import { compose } from 'ramda' // or whatever fp library
 
+
 const fnPipeline = compose(
   mapReducer(somexformreducer),
   mapReducer(anotherxformfunction)
