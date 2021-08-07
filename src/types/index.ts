@@ -4,14 +4,17 @@ export interface IIdxMap {
   now: number
   next: number
 }
-
+/** @since 0.0.1 */
+export interface IThreadConfig {
+  arrCopy: any[]
+  idxMap: IIdxMap
+  ___: any
+}
 /** @since 0.0.0 */
-export type TReducer<T, U> = (
+export declare type TReducer<T, U> = (
   acc: T[],
   cur: T | ReturnType<TTransformFn<T, U>>,
-  indexMap: IIdxMap,
-  array: T[]
+  config: IThreadConfig
 ) => U[]
-
 /** @since 0.0.0 */
-export type TTransformFn<A, B> = (arg: A, index: IIdxMap, original: A[]) => B
+export declare type TTransformFn<A, B> = (arg: A, config: IThreadConfig) => B

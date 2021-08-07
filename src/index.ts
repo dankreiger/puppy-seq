@@ -1,19 +1,14 @@
 /** @since 0.0.0 */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { IIdxMap, TReducer, TTransformFn } from './types'
+import type { IThreadConfig, TReducer, TTransformFn } from './types'
 import { nextIdx, prevIdx, pushReducer } from './utils'
 
 /** @since 0.0.0 */
 export const mapReducer =
   <A, B>(xf: TTransformFn<A, B>) =>
   (reducer: TReducer<A, B>): any =>
-  (
-    list: A[],
-    item: A,
-    index: IIdxMap,
-    original: A[]
-  ): ReturnType<typeof reducer> =>
-    reducer(list, xf(item, index, original), index, original)
+  (list: A[], item: A, config: IThreadConfig): ReturnType<typeof reducer> =>
+    reducer(list, xf(item, config), config)
 
 /**
  * @since 0.0.0
