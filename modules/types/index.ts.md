@@ -14,6 +14,7 @@ Added in v0.0.0
 
 - [utils](#utils)
   - [IIdxMap (interface)](#iidxmap-interface)
+  - [IThreadConfig (interface)](#ithreadconfig-interface)
   - [TReducer (type alias)](#treducer-type-alias)
   - [TTransformFn (type alias)](#ttransformfn-type-alias)
 
@@ -35,12 +36,26 @@ export interface IIdxMap {
 
 Added in v0.0.0
 
+## IThreadConfig (interface)
+
+**Signature**
+
+```ts
+export interface IThreadConfig {
+  arrCopy: any[]
+  idxMap: IIdxMap
+  ___: any
+}
+```
+
+Added in v0.0.1
+
 ## TReducer (type alias)
 
 **Signature**
 
 ```ts
-export type TReducer<T, U> = (acc: T[], cur: T | ReturnType<TTransformFn<T, U>>, indexMap: IIdxMap, array: T[]) => U[]
+export declare type TReducer<T, U> = (acc: T[], cur: T | ReturnType<TTransformFn<T, U>>, config: IThreadConfig) => U[]
 ```
 
 Added in v0.0.0
@@ -50,7 +65,7 @@ Added in v0.0.0
 **Signature**
 
 ```ts
-export type TTransformFn<A, B> = (arg: A, index: IIdxMap, original: A[]) => B
+export declare type TTransformFn<A, B> = (arg: A, config: IThreadConfig) => B
 ```
 
 Added in v0.0.0
