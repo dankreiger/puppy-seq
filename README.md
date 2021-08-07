@@ -12,6 +12,7 @@
   - [Example](#example)
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+[docs](https://dankreiger.github.io/puppy-seq)
 ## Install
 
 
