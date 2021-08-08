@@ -5,16 +5,16 @@ export interface IIdxMap {
   next: number
 }
 /** @since 0.0.1 */
-export interface IThreadConfig {
-  arrCopy: any[]
+export interface IThreadConfig<T> {
+  arrCopy: T[]
   idxMap: IIdxMap
-  ___: any
+  ___: Record<string, any>
 }
 /** @since 0.0.0 */
 export declare type TReducer<T, U> = (
   acc: T[],
   cur: T | ReturnType<TTransformFn<T, U>>,
-  config: IThreadConfig
+  config: IThreadConfig<T>
 ) => U[]
 /** @since 0.0.0 */
-export declare type TTransformFn<A, B> = (arg: A, config: IThreadConfig) => B
+export declare type TTransformFn<A, B> = (arg: A, config: IThreadConfig<A>) => B

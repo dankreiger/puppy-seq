@@ -7,7 +7,7 @@ import { nextIdx, prevIdx, pushReducer } from './utils'
 export const mapReducer =
   <A, B>(xf: TTransformFn<A, B>) =>
   (reducer: TReducer<A, B>): any =>
-  (list: A[], item: A, config: IThreadConfig): ReturnType<typeof reducer> =>
+  (list: A[], item: A, config: IThreadConfig<A>): ReturnType<typeof reducer> =>
     reducer(list, xf(item, config), config)
 
 /**
