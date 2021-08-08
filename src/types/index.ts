@@ -18,3 +18,6 @@ export declare type TReducer<T, U> = (
 ) => U[]
 /** @since 0.0.0 */
 export declare type TTransformFn<A, B> = (arg: A, config: IThreadConfig<A>) => B
+
+/** @since 0.0.0 */
+export declare type TIdxFn = <T>(idx: number, arr: T[]) => number

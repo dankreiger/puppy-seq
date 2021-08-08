@@ -1,10 +1,12 @@
-/** @since 0.0.0 */
-const prevIdx = <T>(idx: number, arr: T[]): number =>
-  idx <= 0 ? (arr.length - 1 + idx) % arr.length : idx - 1
-/** @since 0.0.0 */
-const nextIdx = <T>(idx: number, arr: T[]): number => (idx + 1) % arr.length
+import type { TIdxFn } from './types'
 
-// helper reducers
+/** @since 0.0.0 */
+const prevIdx: TIdxFn = (idx, arr) =>
+  idx <= 0 ? (arr.length - 1 + idx) % arr.length : idx - 1
+
+/** @since 0.0.0 */
+const nextIdx: TIdxFn = (idx, arr) => (idx + 1) % arr.length
+
 /** @since 0.0.0 */
 const pushReducer = <T>(list: T[], v: T): T[] => [...list, v]
 
