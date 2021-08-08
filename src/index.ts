@@ -20,3 +20,4 @@ export const seq = <T, U>(
 }
 
 export * from './Map'
+export * from './types'
