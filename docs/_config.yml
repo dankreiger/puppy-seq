@@ -1,0 +1,11 @@
+remote_theme: pmarsceill/just-the-docs
+
+# Enable or disable the site search
+search_enabled: true
+
+# Aux links for the upper right navigation
+aux_links:
+  'Homepage':
+    - 'https://dankreiger.github.io/puppy-seq'
+  'Github':
+    - 'https://github.com/dankreiger/puppy-seq'
