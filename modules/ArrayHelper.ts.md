@@ -24,11 +24,7 @@ Added in v0.0.0
 **Signature**
 
 ```ts
-export declare const ArrayHelper: {
-  pushReducer: <T>(list: T[], v: T) => T[]
-  prevIdx: <T>(idx: number, arr: T[]) => number
-  nextIdx: <T>(idx: number, arr: T[]) => number
-}
+export declare const ArrayHelper: { pushReducer: <T>(list: T[], v: T) => T[]; prevIdx: TIdxFn; nextIdx: TIdxFn }
 ```
 
 Added in v0.0.6
