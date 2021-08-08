@@ -41,10 +41,10 @@ Added in v0.0.0
 **Signature**
 
 ```ts
-export interface IThreadConfig {
-  arrCopy: any[]
+export interface IThreadConfig<T> {
+  arrCopy: T[]
   idxMap: IIdxMap
-  ___: any
+  ___: Record<string, any>
 }
 ```
 
@@ -55,7 +55,11 @@ Added in v0.0.1
 **Signature**
 
 ```ts
-export declare type TReducer<T, U> = (acc: T[], cur: T | ReturnType<TTransformFn<T, U>>, config: IThreadConfig) => U[]
+export declare type TReducer<T, U> = (
+  acc: T[],
+  cur: T | ReturnType<TTransformFn<T, U>>,
+  config: IThreadConfig<T>
+) => U[]
 ```
 
 Added in v0.0.0
@@ -65,7 +69,7 @@ Added in v0.0.0
 **Signature**
 
 ```ts
-export declare type TTransformFn<A, B> = (arg: A, config: IThreadConfig) => B
+export declare type TTransformFn<A, B> = (arg: A, config: IThreadConfig<A>) => B
 ```
 
 Added in v0.0.0
