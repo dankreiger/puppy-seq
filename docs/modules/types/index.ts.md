@@ -15,6 +15,7 @@ Added in v0.0.0
 - [utils](#utils)
   - [IIdxMap (interface)](#iidxmap-interface)
   - [IThreadConfig (interface)](#ithreadconfig-interface)
+  - [TIdxFn (type alias)](#tidxfn-type-alias)
   - [TReducer (type alias)](#treducer-type-alias)
   - [TTransformFn (type alias)](#ttransformfn-type-alias)
 
@@ -49,6 +50,16 @@ export interface IThreadConfig<T> {
 ```
 
 Added in v0.0.1
+
+## TIdxFn (type alias)
+
+**Signature**
+
+```ts
+export declare type TIdxFn = <T>(idx: number, arr: T[]) => number
+```
+
+Added in v0.0.0
 
 ## TReducer (type alias)
 

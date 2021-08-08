@@ -1,3 +1,5 @@
+/** @since 0.0.0 */
+
 import type { TIdxFn } from './types'
 
 /** @since 0.0.0 */
