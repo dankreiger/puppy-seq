@@ -7,7 +7,7 @@
   "devDependencies": {
     "typescript": "4.4.3",
     "prettier": "2.4.1",
-    "prettier-plugin-jsdoc": "0.3.24",
+    "prettier-plugin-jsdoc": "0.4.2",
     "eslint": "7.32.0",
     "@typescript-eslint/eslint-plugin": "4.31.1",
     "@typescript-eslint/parser": "4.31.1",
